@@ -2,7 +2,7 @@ require('dotenv').config()
 const Discord = require('discord.js');
 const { Client, IntentsBitField } = require('discord.js');
 const axios = require('axios');
-const API_URL = 'https://mu-finder-api.onrender.com';
+const API_URL = 'https://mu-finder-api.onrender.com/';
 
 const client = new Client(
     { intents: [
