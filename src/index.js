@@ -32,6 +32,7 @@ client.on('messageCreate', async (msg) => {
         }
         const buffer = new Buffer.from(response.data.result.split(",")[1], "base64");
         const attachment = new Discord.AttachmentBuilder(buffer, { name: 'image.jpg' })
+        msg.reply(`Location: ${response.data.location}`);
         msg.channel.send({ files: [attachment] });
       } catch (error) {
         console.log(error.response.data.error);
